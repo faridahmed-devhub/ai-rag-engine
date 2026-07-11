@@ -1,0 +1,12 @@
+sentence-transformers
+faiss-cpu
+numpy
+python-dotenv
+fastapi
+uvicorn
+beautifulsoup4
+requests
+pypdf
+python-docx
+langchain-text-splitters
+pytest
