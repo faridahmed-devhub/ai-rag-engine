@@ -1,100 +1,149 @@
-# AI RAG Engine
+# 🧠 AI RAG Engine
 
-A modular Retrieval-Augmented Generation (RAG) framework for building domain-specific AI assistants using document ingestion, semantic search, vector embeddings, and Large Language Models (LLMs).
+![Python](https://img.shields.io/badge/Python-3.12+-blue)
+![FAISS](https://img.shields.io/badge/Vector%20Database-FAISS-green)
+![AI](https://img.shields.io/badge/AI-RAG-orange)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
-This project explores how AI systems can retrieve reliable external knowledge and generate context-aware responses for real-world software engineering applications.
+A modular **Retrieval-Augmented Generation (RAG)** framework for building domain-specific AI assistants using document ingestion, semantic search, vector embeddings, and Large Language Models (LLMs).
+
+This project explores how AI systems can retrieve reliable external knowledge and generate context-aware responses for real-world **Software Engineering and AI applications**.
+
+---
+
+# 📌 Table of Contents
+
+* [Overview](#overview)
+* [Architecture](#architecture)
+* [Features](#features)
+* [Tech Stack](#tech-stack)
+* [Project Structure](#project-structure)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Research Motivation](#research-motivation)
+* [Future Work](#future-work)
+* [Screenshots](#screenshots)
+* [Learning Outcomes](#learning-outcomes)
+* [Author](#author)
 
 ---
 
 # Overview
 
-Large Language Models (LLMs) are powerful but may produce inaccurate responses when they lack domain-specific knowledge.
+Large Language Models (LLMs) are powerful but can generate inaccurate responses when they do not have access to domain-specific or updated information.
 
-This project implements a RAG pipeline that enhances LLM capabilities by:
+This project implements a RAG pipeline that improves LLM reliability by combining:
 
-* Collecting knowledge from external sources
-* Converting documents into vector representations
-* Retrieving relevant information
-* Providing context-aware responses
+* External knowledge sources
+* Document processing
+* Semantic embeddings
+* Vector similarity search
+* Context-aware generation
 
 ---
 
 # Architecture
 
 ```text
-                 User Query
-                     |
-                     v
-              Query Embedding
-                     |
-                     v
-              Vector Retrieval
-                     |
-                     v
-              Relevant Context
-                     |
-                     v
-              LLM Generation
-                     |
-                     v
-                  Response
+                    User Question
+                          |
+                          v
+                 Query Embedding
+                          |
+                          v
+                  Vector Retrieval
+                          |
+                          v
+                  Relevant Documents
+                          |
+                          v
+                  Context Builder
+                          |
+                          v
+                  Large Language Model
+                          |
+                          v
+                       Response
+
 
 
 Knowledge Sources
 
-PDF
-DOCX
-TXT
-Web Pages
-Markdown
+ PDF
+ DOCX
+ TXT
+ Markdown
+ Web Pages
+ Code Repositories
+
         |
         v
+
  Document Processing
+
         |
         v
+
  Text Chunking
+
         |
         v
- Embedding Model
+
+ Embedding Generation
+
         |
         v
+
  Vector Database
+
+        |
+        v
+
+ Semantic Retrieval
 ```
 
 ---
 
 # Features
 
-## Document Intelligence
+## 📄 Document Intelligence
 
-✅ PDF ingestion
-✅ DOCX ingestion
-✅ TXT file processing
-✅ Markdown support
-✅ Website content extraction
+* ✅ PDF ingestion
+* ✅ DOCX ingestion
+* ✅ TXT processing
+* ✅ Markdown support
+* ✅ Website content extraction
 
-## Retrieval System
+---
 
-✅ Semantic search
-✅ Vector similarity search
-✅ FAISS integration
-✅ Top-K document retrieval
-✅ Context generation
+## 🔎 Retrieval System
 
-## AI Pipeline
+* ✅ Semantic search
+* ✅ Vector similarity search
+* ✅ FAISS integration
+* ✅ Top-K retrieval
+* ✅ Context generation
 
-✅ Sentence Transformer embeddings
-✅ LLM-ready architecture
-✅ Knowledge-grounded responses
-✅ Modular RAG components
+---
 
-## Engineering Features
+## 🤖 AI Pipeline
 
-✅ Clean architecture
-✅ Modular design
-✅ Configurable pipeline
-✅ Persistent storage
-✅ Extensible components
+* ✅ Sentence Transformer embeddings
+* ✅ Hugging Face model support
+* ✅ LLM-ready architecture
+* ✅ Knowledge-grounded responses
+* ✅ Modular RAG components
+
+---
+
+## ⚙️ Engineering Features
+
+* ✅ Clean architecture
+* ✅ Modular design
+* ✅ Configurable pipeline
+* ✅ Persistent storage
+* ✅ Extensible components
+* ✅ API-ready architecture
 
 ---
 
@@ -104,7 +153,7 @@ Markdown
 
 * Python 3.12+
 
-## AI / ML
+## AI / Machine Learning
 
 * Sentence Transformers
 * Hugging Face Models
@@ -121,12 +170,12 @@ Markdown
 * python-docx
 * BeautifulSoup
 
-## API
+## API Development
 
 * FastAPI
 * Uvicorn
 
-## Development
+## Development Tools
 
 * Git
 * Docker
@@ -171,7 +220,7 @@ ai-rag-engine/
 
 # Installation
 
-Clone repository:
+## Clone Repository
 
 ```bash
 git clone https://github.com/faridahmed-devhub/ai-rag-engine.git
@@ -179,27 +228,31 @@ git clone https://github.com/faridahmed-devhub/ai-rag-engine.git
 cd ai-rag-engine
 ```
 
-Create environment:
+---
+
+## Create Virtual Environment
 
 ```bash
 python -m venv venv
 ```
 
-Activate environment:
+Activate:
 
-Windows:
+### Windows
 
 ```bash
 venv\Scripts\activate
 ```
 
-Linux/Mac:
+### Linux / Mac
 
 ```bash
 source venv/bin/activate
 ```
 
-Install dependencies:
+---
+
+## Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -207,7 +260,7 @@ pip install -r requirements.txt
 
 ---
 
-# Basic Usage
+# Usage
 
 Example:
 
@@ -235,15 +288,16 @@ print(results)
 
 # Research Motivation
 
-This project investigates the application of Retrieval-Augmented Generation in Software Engineering environments.
+This project explores the application of **Retrieval-Augmented Generation in Software Engineering**.
 
-Research interests include:
+Research interests:
 
 * AI-assisted software development
 * Intelligent developer tools
-* LLM-based code assistants
+* LLM-based coding assistants
 * Knowledge-grounded AI systems
 * Automated software engineering workflows
+* AI agents for developer productivity
 
 ---
 
@@ -251,16 +305,16 @@ Research interests include:
 
 Planned improvements:
 
-* Hybrid search (BM25 + Vector Search)
-* Cross Encoder reranking
-* Website crawler
-* Metadata-aware retrieval
-* Incremental indexing
-* Multi-agent RAG system
-* Code repository understanding
-* AI software engineering assistant
-* Cloud deployment
-* Evaluation framework for RAG accuracy
+* Hybrid Search (BM25 + Vector Search)
+* Cross Encoder Reranking
+* Advanced Website Crawler
+* Metadata-aware Retrieval
+* Incremental Indexing
+* Multi-Agent RAG System
+* Code Repository Understanding
+* AI Software Engineering Assistant
+* Cloud Deployment
+* RAG Evaluation Framework
 
 ---
 
@@ -273,6 +327,8 @@ Add:
 ```
 docs/images/architecture.png
 ```
+
+---
 
 ## API Demo
 
@@ -289,7 +345,7 @@ docs/images/api.png
 Through this project, I explored:
 
 * Retrieval-Augmented Generation architecture
-* Vector databases
+* Vector database systems
 * Semantic search
 * Document intelligence
 * AI system design
@@ -299,11 +355,12 @@ Through this project, I explored:
 
 # Author
 
-**Farid Ahmed**
+## Farid Ahmed
 
 Software Engineer | AI & Software Engineering Research Enthusiast
 
 GitHub:
+
 https://github.com/faridahmed-devhub
 
 ---
